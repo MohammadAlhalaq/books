@@ -1,0 +1,20 @@
+{{#each imageInfo}}
+  <div class="main-div">
+
+  <h2>{{this.title}}</h2>
+  <hr>
+  <div class="book-div">
+    <img src="{{this.imageUrl}}" alt="Book-image" srcset="">
+    <div class="book-info">
+      <h4><a href="{{this.bookUrl}}" target="_blank">Read book</a></h4>
+      <h4>categories: {{this.categories}}</h4>
+      <h4>Date: {{this.publishedDate}}</h4>
+
+    </div>
+  </div>
+  </div>
+{{/each}}
+{{!-- imageUrl
+bookUrl
+publishedDate
+categories --}}
