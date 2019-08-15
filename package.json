@@ -1,0 +1,40 @@
+{
+  "name": "books",
+  "version": "1.0.0",
+  "description": "liprary",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/test.js | tap-spec",
+    "start": "node src/server.js",
+    "watch": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohammadAlhalaq/books.git"
+  },
+  "author": "mohammadAlhallaq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohammadAlhalaq/books/issues"
+  },
+  "homepage": "https://github.com/MohammadAlhalaq/books#readme",
+  "devDependencies": {
+    "dotenv": "^8.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "node-fetch": "^2.6.0"
+  }
+}
