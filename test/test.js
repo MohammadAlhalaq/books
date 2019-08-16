@@ -1,5 +1,7 @@
 const test = require('tape');
+const supertest = require('supertest');
 const { render } = require('./../src/views/helpers');
+const app = require('./../src/app');
 
 const actual = {
   kind: 'books#volumes',
@@ -86,7 +88,6 @@ const actual = {
 };
 
 test('test helper', (t) => {
-  console.log(render(actual.items));
   const expected = [{
     title: 'The VC-1 and H.264 Video Compression Standards for Broadband Video Services',
     bookUrl: 'http://books.google.com/books?id=MKhbLPHRb78C&pg=PA139&dq=h&hl=&cd=1&source=gbs_api',
@@ -96,4 +97,41 @@ test('test helper', (t) => {
   }];
   t.deepEqual(render(actual.items), expected, 'should view title and imageUrl and bookUrl and publishedDate and categories');
   t.end();
+});
+
+test('test success for home /', (t) => {
+  supertest(app)
+    .get('/')
+    .expect(200)
+    .expect(/html/)
+    .end((err, res) => {
+      t.error(err);
+      t.deepEqual(res.text.includes('main-div'), true, 'should include main-div');
+      t.end();
+    });
+});
+
+test('test page not found for home /', (t) => {
+  supertest(app)
+    .get('/gjk')
+    .expect(404)
+    .expect(/html/)
+    .end((err, res) => {
+      t.error(err);
+      t.deepEqual(res.text.includes('404'), true, 'should include 404');
+      t.end();
+    });
+});
+
+
+test('test success for home /book-name', (t) => {
+  supertest(app)
+    .get('/book-name')
+    .expect(200)
+    .expect(/html/)
+    .end((err, res) => {
+      t.error(err);
+      t.deepEqual(res.text.includes('main-div'), true, 'should include main-div');
+      t.end();
+    });
 });
