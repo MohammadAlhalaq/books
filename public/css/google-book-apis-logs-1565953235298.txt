@@ -1,0 +1,10 @@
+2019-08-16T10:37:14.133796+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2019-08-16T10:37:14.133798+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2019-08-16T10_37_14_127Z-debug.log
+2019-08-16T10:37:14.230444+00:00 heroku[web.1]: State changed from starting to crashed
+2019-08-16T10:37:14.209153+00:00 heroku[web.1]: Process exited with status 1
+2019-08-16T10:54:06.057372+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=google-book-apis.herokuapp.com request_id=26d60a26-f0ed-4211-842d-699012c63566 fwd="85.114.109.112" dyno= connect= service= status=503 bytes= protocol=https
+2019-08-16T10:54:06.624514+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=google-book-apis.herokuapp.com request_id=38ad87aa-6e29-4962-ad6e-d490ebd56dc3 fwd="85.114.109.112" dyno= connect= service= status=503 bytes= protocol=https
+2019-08-16T10:54:11.595460+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=google-book-apis.herokuapp.com request_id=e6acc767-6192-4743-821b-313d37d30ac5 fwd="35.190.167.223" dyno= connect= service= status=503 bytes= protocol=https
+2019-08-16T10:55:07.180642+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=google-book-apis.herokuapp.com request_id=d65b6dd2-df88-45b9-870f-4ad64a220d4e fwd="35.231.112.87" dyno= connect= service= status=503 bytes= protocol=https
+2019-08-16T10:56:16.785246+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=google-book-apis.herokuapp.com request_id=7e6b80a1-fb14-4fc9-b9d5-992817638e66 fwd="5.253.70.74" dyno= connect= service= status=503 bytes= protocol=https
+2019-08-16T10:56:18.409090+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=google-book-apis.herokuapp.com request_id=a3799884-72ee-40ec-99cc-270249dfd61e fwd="5.253.70.74" dyno= connect= service= status=503 bytes= protocol=https
