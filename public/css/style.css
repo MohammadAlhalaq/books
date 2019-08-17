@@ -22,9 +22,9 @@ body{
 }
 .books-input{
   padding: 1rem;
-  min-width: 50vw;
+  width: 50vw;
   border-bottom-left-radius: 1rem;
-
+  outline: none;
 }
 .book-supmit{
   padding: .8rem;
@@ -60,4 +60,22 @@ a{
   color:#ccc;
   font-family: sans-serif;
   margin-top: 5vh;
+}
+
+@media (max-width: 770px){
+  .books-input{
+    width: 31vw;
+
+  }
+  .main-div{
+    margin: 0;
+  }
+  .book-div{
+    flex-direction: column;
+  }
+  .book-info{
+    margin-left: 0;
+    text-align: left;
+  }
+  
 }
